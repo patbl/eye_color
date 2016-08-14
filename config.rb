@@ -70,3 +70,9 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+activate :deploy do |deploy|
+  deploy.deploy_method = :rsync
+  deploy.path = "/home/public"
+  deploy.host = "itwastrees_eyecolor@ssh.phx.nearlyfreespeech.net"
+end
